@@ -78,8 +78,6 @@ Fact tables capture the actual events of the business. The goal here was to defi
 * **Dimensional Connections:** Swapped natural source strings (`CustomerID`, `ProductCode`) for clean surrogate warehouse integers (`customer_key`, `product_key`).
 * **Metric Engineering:** Calculated clean transactional column fields:
 
-* **Metric Engineering:** Calculated clean transactional column fields:
-
   ```text
   line_gross_total = quantity * unit_price
   line_discount_amount = line_gross_total * discount_pct
