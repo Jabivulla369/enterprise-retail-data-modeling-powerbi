@@ -168,6 +168,8 @@ The final model forms a highly optimized Star Schema configuration. Every relati
 
 ```
 
+<img width="1905" height="966" alt="image" src="https://github.com/user-attachments/assets/b6d7185e-b529-4194-a583-81bba17440a8" />
+
 ---
 
 ## 📈 Analytical Business Capabilities
