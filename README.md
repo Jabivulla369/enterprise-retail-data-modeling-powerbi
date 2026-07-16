@@ -78,14 +78,12 @@ Fact tables capture the actual events of the business. The goal here was to defi
 * **Dimensional Connections:** Swapped natural source strings (`CustomerID`, `ProductCode`) for clean surrogate warehouse integers (`customer_key`, `product_key`).
 * **Metric Engineering:** Calculated clean transactional column fields:
 
-$$\text{line\_gross\_total} = \text{quantity} \times \text{unit\_price}$$
+* **Metric Engineering:** Calculated clean transactional column fields:
 
-
-$$\text{line\_discount\_amount} = \text{line\_gross\_total} \times \text{discount\_pct}$$
-
-
-$$\text{line\_net\_total} = \text{line\_gross\_total} - \text{line\_discount\_amount}$$
-
+  ```text
+  line_gross_total = quantity * unit_price
+  line_discount_amount = line_gross_total * discount_pct
+  line_net_total = line_gross_total - line_discount_amount
 
 * **Validation:** Audited aggregate net outputs across both fiscal years against early benchmark captures to confirm zero record omission or double-counting during row appending.
 
